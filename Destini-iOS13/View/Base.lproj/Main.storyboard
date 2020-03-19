@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WSt-CU-J3n">
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000023" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="WHn-Cb-OAO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="story text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3N-qF-T5O" userLabel="storyLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="deZ-rp-elJ">
+                                        <rect key="frame" x="0.0" y="30" width="414" height="788"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7W-T1-Oyg" userLabel="choice1Button">
+                                                <rect key="frame" x="162.5" y="0.0" width="89" height="394"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="choice 1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVm-yV-T3o" userLabel="choice2Button">
+                                                <rect key="frame" x="161" y="394" width="92" height="394"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="choice 2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="deZ-rp-elJ" firstAttribute="top" secondItem="w3N-qF-T5O" secondAttribute="bottom" id="Q9z-K6-OP6"/>
+                                    <constraint firstAttribute="trailing" secondItem="deZ-rp-elJ" secondAttribute="trailing" id="aio-Mc-8NZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="deZ-rp-elJ" secondAttribute="bottom" id="jsU-CL-WKA"/>
+                                    <constraint firstItem="deZ-rp-elJ" firstAttribute="leading" secondItem="WHn-Cb-OAO" secondAttribute="leading" id="z82-NO-YPZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WHn-Cb-OAO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0u8-1A-AHt"/>
+                            <constraint firstAttribute="bottom" secondItem="WSt-CU-J3n" secondAttribute="bottom" id="113-Hb-B8S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHn-Cb-OAO" secondAttribute="trailing" id="B1x-Bb-spL"/>
+                            <constraint firstItem="WHn-Cb-OAO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NYb-B5-gd2"/>
+                            <constraint firstAttribute="trailing" secondItem="WSt-CU-J3n" secondAttribute="trailing" id="Odg-p3-oS8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHn-Cb-OAO" secondAttribute="bottom" id="REl-EX-rtP"/>
+                            <constraint firstItem="WSt-CU-J3n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dqT-In-Sh6"/>
+                            <constraint firstItem="WSt-CU-J3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uhe-Sp-c1i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -23,4 +74,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="958" height="1793"/>
+    </resources>
 </document>
