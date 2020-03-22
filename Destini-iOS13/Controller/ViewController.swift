@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func choiceMade(_ sender: UIButton) {
-        storyBrain.nextQuestion()
+        storyBrain.nextQuestion(choice: sender.tag)
         updateUi()
     }
     

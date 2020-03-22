@@ -40,10 +40,10 @@ struct StoryBrain {
         }
     }
     
-    mutating func nextQuestion()  {
+    mutating func nextQuestion(choice: Int)  {
         if selectedStory < story.count - 1
         {
-            selectedStory += 1
+            selectedStory += choice
         }
         else {
             selectedStory = 0
