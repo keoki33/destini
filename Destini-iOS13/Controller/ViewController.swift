@@ -18,11 +18,14 @@ class ViewController: UIViewController {
     
     var storyBrain = StoryBrain()
     
+  
+  
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
    updateUi()
-
-
+    
     }
     
     
